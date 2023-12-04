@@ -83,7 +83,7 @@ print(X_test.shape)
 sample_shape = X_test.shape[1:]
 print(sample_shape)
 
-# Normalização de Dados
+# Data Normalization
 #scaler = StandardScaler()
 #X_train = scaler.fit_transform(X_train)
 #X_test = scaler.transform(X_test)
