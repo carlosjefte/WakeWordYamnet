@@ -4,9 +4,9 @@ from tflite_support import flatbuffers
 from tflite_support import metadata as _metadata
 from tflite_support import metadata_schema_py_generated as _metadata_fb
 
-model_path = input("caminho para o seu modelo: ").replace('"', "").replace(" ", "")
-label_path = input("caminho para as labels do seu modelo: ").replace('"', "").replace(" ", "")
-output_file = input("caminho onde será criado o arquivo: ").replace('"', "").replace(" ", "")
+model_path = input("path to your model: ").replace('"', "").replace(" ", "")
+label_path = input("path to model labels: ").replace('"', "").replace(" ", "")
+output_file = input("output path: ").replace('"', "").replace(" ", "")
 splited_path = model_path.split("\\")
 if len(splited_path): splited_path = model_path.split("/")
 model_name = splited_path[len(splited_path) - 1].split(".")[0]
@@ -89,4 +89,4 @@ if (label_path != ""):
   with open(f"metadata\{model_name}_metadata.json", "w") as f:
     f.write(json_file)
 
-print("Conversão bem-sucedida")
+print("Successful convertion!")
