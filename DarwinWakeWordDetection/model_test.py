@@ -1,15 +1,10 @@
-import librosa
 import numpy as np
 from tensorflow.saved_model import load
 import time
 from tensorflow.python import keras
 import tensorflow as tf
-import tensorflow_io as tfio
 import sounddevice as sd
 import threading
-from scipy.io.wavfile import write
-import pyaudio
-import python_speech_features
 
 fs = 22050
 seconds = 1
